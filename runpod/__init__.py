@@ -1,7 +1,5 @@
 """ Allows runpod to be imported as a module. """
 
-from pkg_resources import DistributionNotFound, get_distribution
-
 from .api_wrapper.ctl_commands import (
     create_pod,
     get_gpu,
@@ -19,8 +17,4 @@ api_url_base = "https://api.runpod.io"  # pylint: disable=invalid-name
 
 endpoint_url_base = "https://api.runpod.ai/v2"  # pylint: disable=invalid-name
 
-
-try:
-    __version__ = get_distribution("runpod").version
-except DistributionNotFound:
-    __version__ = "unknown"
+__version__ = "1.1.3"
